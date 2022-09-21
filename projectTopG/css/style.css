@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap);
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans";
+}
+
+#bear {
+    width: 50px;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+nav, div1 {
+    display: flex;
+    align-items: center;
+    
+}
+
+nav, div1, p {
+    display: flex;
+    font-weight: 400;
+    font-size: 120%;
+    color: white;
+}
+
+nav, div2 {
+    display: flex;
+    margin-left: auto;
+    margin-right: 3vw;
+    gap: 20px;
+}
+
+.nav-btn {
+    color: white;
+    border: 2px solid orange;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    background-color: orange
+}
+
+section, div1{
+    font-size: 90%;
+    font-weight: 100;
+    text-align: justify;
+    color: white;
+    margin: 3vw
+}
+
+div, #card {
+    display: grid;
+    margin: auto;
+    max-width: 450px;
+    width: 95%;
+    margin-top: 10px;
+    
+}
