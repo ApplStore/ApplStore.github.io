@@ -1,13 +1,62 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu&display=swap);
 
 
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Ubuntu";
 }
 
-body {
-    font-family: "Open Sans";
+:root {
+    --white: white;
+    --orange: orange;
+    --black: black;
+}
+
+.nav-container {
+    width: 100%;
+    background-color: #181818;
+    position: relative;
+
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    width: 95%;
+    max-width: 1890px;
+    margin: 0 auto;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    list-style: none;
+    text-align: center;
+    justify-self: end;
+    gap: 20px;
+    
+}
+
+.nav-btn {
+    color: white;
+    border: 2px solid orange;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+.nav-btn:hover {
+    color: white;
+    background-color: orange;
+    transition: all 0.2s ease-out;
 }
 
 #bear {
@@ -16,48 +65,106 @@ body {
     margin: 5px;
 }
 
-nav, div1 {
+#nav-logo {
     display: flex;
+    justify-self: start;
+    color: white;
+    font-family: "Ubuntu";
     align-items: center;
-    
-}
-
-nav, div1, p {
-    display: flex;
+    white-space: nowrap;
     font-weight: 400;
-    font-size: 120%;
-    color: white;
-}
-
-nav, div2 {
-    display: flex;
-    margin-left: auto;
-    margin-right: 3vw;
-    gap: 20px;
-}
-
-.nav-btn {
-    color: white;
-    border: 2px solid orange;
-    padding: 10px 28px;
-    text-align: center;
+    font-size: 150%;
     text-decoration: none;
-    font-size: 14px;
 }
 
-.nav-btn:hover {
-    background-color: orange
+/* Mobile menu */
+
+.menu-toggle .hamburger-bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
 }
 
-section, div1{
-    font-size: 90%;
-    font-weight: 100;
-    text-align: justify;
-    color: white;
-    margin: 3vw
+@media screen and (max-width: 1008px) {
+    .nav-container {
+        position: relative;
+    }
+
+    .btn-container {
+        display: grid;
+        grid-template-columns: auto;
+        background: #181818;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .nav-btn {
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+        white-space: nowrap;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    #nav-logo {
+        margin-left: 20px;
+    }
+
+    .btn-container.active {
+        background: #181818;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    #menu {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        
+    }
+
+    .menu-toggle .hamburger-bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        cursor: pointer;
+    }
+
+    #menu.is-active .hamburger-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu.is-active .hamburger-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #menu.is-active .hamburger-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
-div, #card {
+#card {
     display: grid;
     margin: auto;
     max-width: 450px;
