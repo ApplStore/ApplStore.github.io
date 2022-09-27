@@ -172,3 +172,9 @@
     margin-top: 10px;
     
 }
+
+#success-pay {
+    display: grid;
+    margin: auto;
+    margin-top: 70px;
+}
