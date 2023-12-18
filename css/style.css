@@ -179,3 +179,8 @@
     margin-top: 70px;
     width: 102px;
 }
+
+.sep {
+    margin-bottom: 5px;
+    font: "Open sans";
+}
